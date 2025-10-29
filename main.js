@@ -2,12 +2,10 @@ const form = document.getElementById('search');
 const q = document.getElementById('query');
 const Search_Button = document.getElementById('Search-Button');
 const Main = document.getElementById('content');
-const loader = `https://api.jamendo.com/v3.0/tracks/?client_id=${clientId}&format=json&limit=10&search=walker&include=musicinfo+licenses`;
+//const loader = `https://api.jamendo.com/v3.0/tracks/?client_id=${clientId}&format=json&limit=10&search=walker&include=musicinfo+licenses`;
 const Url = `https://fluxtech-youtubeapi.onrender.com`;
 function SearchMusic(Url) {
-  fetch(Url, {
-    headers: { Authorization: clientId }
-  })
+  fetch(Url)
     .then(res => res.json())
     .then(data => {
       console.log(data);
