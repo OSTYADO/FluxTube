@@ -1,0 +1,83 @@
+body {
+    font-size: 15pt;
+    background: black;
+}
+h1{
+    font-family:  'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: mediumvioletred;
+    text-align: center;
+}
+#video1{
+    width:100%;
+    height:100%;
+    z-index:-1;
+    position:fixed;
+   
+    object-fit:cover;
+}
+#query{
+    color:white;
+    width:60%;
+    position:sticky;
+    border:2px solid mediumvioletred;
+    height:30px;
+    border-radius: 50px;
+    background: black;
+    margin-left: 5%;
+}
+#Search-Button{
+    color:white;
+    background: mediumvioletred;
+    border:none;
+    position:sticky;
+    height:30px;
+    border-radius: 10px;
+}
+#Search-Button:hover{
+    background:linear-gradient(to left, mediumvioletred, cyan);
+}
+h2,h3 {
+    color: ghostwhite;
+    font-size:10px;
+}
+#content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each video card */
+.music {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 0, 170, 0.3);
+  transition: transform 0.3s;
+}
+
+.music:hover {
+  transform: scale(1.09);
+}
+
+/* Video element styling */
+.music img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  overflow: hidden;
+  border-bottom: 2px solid #ff00aa;
+  border-radius: 12px 12px 0 0;
+}
+.music iframe:hover{
+    border-bottom: 2px solid lime;
+}
+.music h2{
+    padding-left:5%;
+    font-size:17px;
+}
+.music h3{
+    padding-left:5%;
+    color:grey;
+    font-size: 12px;
+}
