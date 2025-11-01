@@ -2,6 +2,7 @@ const form = document.getElementById('search');
 const q = document.getElementById('query');
 const Search_Button = document.getElementById('Search-Button');
 const Main = document.getElementById('content');
+const warn = document.getElementById("warn");
 //const loader = `https://api.jamendo.com/v3.0/tracks/?client_id=${clientId}&format=json&limit=10&search=walker&include=musicinfo+licenses`;
 const Url = `https://fluxtech-youtubeapi.onrender.com`;
 function SearchMusic(Url) {
@@ -60,8 +61,13 @@ SearchMusic(Url);
    if(query){
    SearchMusic(API)
    q.innerHTML = ""
+warn.style.display = "none";
    } else {
-    q.innerHTML = "Provide Input";
+   warn.style.display = "block"
+     warn.style.color = "red";
+     warn.style.fontSize = "30px";
+     warn.style.fontWeight = "bold";
+    warn.innerHTML = "Provide Input";
    }
   });
    
