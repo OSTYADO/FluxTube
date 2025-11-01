@@ -68,6 +68,12 @@ warn.style.display = "none";
      warn.style.fontSize = "30px";
      warn.style.fontWeight = "bold";
     warn.innerHTML = "Provide Input";
+setTimeout(() => 
+      { 
+       warn.style.display = "none"
+       SearchMusic(Url)
+      },2000);
+    
    }
   });
    
